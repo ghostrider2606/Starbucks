@@ -1,71 +1,200 @@
-/* General Reset */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
-
-/* Body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
-
-/* Header */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e1e1e1;
+}
 header {
-    background-color: #006747; /* Starbucks green */
-    color: white;
-    padding: 20px;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-header h1 {
-    font-size: 2.5rem;
+header .logo {
+  position: relative;
+  max-width: 80px;
 }
-
-/* Main Content */
-main {
-    padding: 20px;
+header ul {
+  position: relative;
+  display: flex;
 }
-
-.intro {
-    text-align: center;
-    margin-bottom: 30px;
+header ul li {
+  list-style: none;
 }
-
-.intro p {
-    font-size: 1.2rem;
-    color: #555;
+header ul li a {
+  display: inline-block;
+  color: #017143;
+  font-weight: bold;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: 0.5s;
 }
-
-.products {
-    text-align: center;
+.content .textBox h2 span {
+  color: #017143;
+  font-size: 1.3em;
+  font-weight: 900;
 }
-
-.products h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.products ul {
-    list-style: none;
-    padding: 0;
+.content .textBox {
+  position: relative;
+  max-width: 600px;
 }
-
-.products ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.content .textBox h2 {
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
 }
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.content .textBox p {
+  color: #333;
+}
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #017143;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.content .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.content .imgBox img {
+  max-width: 340px;
+}
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+.thumb li img {
+  max-width: 60px;
+  animation: float1 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.starbucks {
+  animation: float 3s ease-in-out infinite;
+}
+.sci {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+  filter: invert(1);
+}
+.sci li img {
+    animation: float1 2.8s ease-in-out infinite;
+}
+.sci li img:hover {
+    transition: 0.5s;
+    transform: translateX(-15px);
+}
+.sci1 {
+    animation-delay: 0.5;
+}
+.sci2 {
+    animation-delay: 1;
+}
+.sci3 {
+    animation-delay: 1.5;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes color-changer {
+    0% {
+        color: initial;
+    }
+    50% {
+        color: #017143;
+    }
+    100% {
+        color: initial;
+    }
 }

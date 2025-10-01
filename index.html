@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Starbucks</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Starbucks</h1>
-    </header>
-    <main>
-        <section class="intro">
-            <p>Welcome to Starbucks! Your favorite coffee, made just the way you like it.</p>
-        </section>
-        <section class="products">
-            <h2>Our Coffee</h2>
-            <ul>
-                <li>Coffee</li>
-                <li>Espresso</li>
-                <li>Cappuccino</li>
-                <li>Latte</li>
-                <li>Mocha</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Starbucks Corporation. All rights reserved.</p>
-    </footer>
-</body>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#">
+          <img src="images/logo.png" class="logo" alt="Logo" />
+          <ul>
+            <li><a href="#" class="img1">Menu</a></li>
+            <li><a href="#" class="img2">Home</a></li>
+            <li><a href="#" class="img3">What's New?</a></li>
+            <li><a href="#" class="img4">Contact</a></li>
+          </ul>
+        </a>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Its not just Coffee<br />It's <span>Starbucks</span></h2>
+          <p>
+            In the realm of aromatic indulgence, where the alchemy of beans meets the kiss of boiling water, welcome to our digital haven, a sanctum for coffee connoisseurs and caffeine aficionados alike. Here, amidst the whirlwind of life, we beckon you to embark on a sensory journey that transcends the ordinary, one cup at a time. Our passion for coffee knows no bounds, and we have crafted this virtual oasis to share our love for the sacred brew, celebrating its rich history, diverse flavors, and the vibrant culture that swirls in every sip. Join us, dear visitor, as we embark on a voyage through the delightful world of coffee, where each roast unveils a new tale and every blend unveils an adventure waiting to be sipped.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/img1.png" class="starbucks" alt="Image 1" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="images/thumb1.png"
+            class="img1"
+            alt="Thumb1"
+            onClick="imgSlider('images/img1.png');changeCircleColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/thumb2.png"
+            class="img2"
+            alt="Thumb2"
+            onClick="imgSlider('images/img2.png');changeCircleColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/thumb3.png"
+            class="img3"
+            alt="Thumb3"
+            onClick="imgSlider('images/img3.png');changeCircleColor('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"
+            ><img src="images/facebook.png" alt="Facebook" class="sci1"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/twitter.png" alt="Twitter" class="sci2"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/instagram.png" alt="Instagram" class="sci3"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>

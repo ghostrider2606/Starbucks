@@ -1,3 +1,4 @@
+
 # Starbucks Website Prototype
 
 This repository contains a prototype or demo project for the Starbucks website.
@@ -12,3 +13,21 @@ This project is a design prototype showcasing the layout, UI components, and bas
 - Menu display
 - Navigation bar
 - Responsive design
+# Starbucks Design
+
+A basic design concept for the landing page of Starbucks.
+
+## Features
+
+- **CSS Keyframes animations.
+- **Responsive with default hyperlinks.
+- **Good usage of icons.
+  
+
+## Installation
+
+To use this project, simply clone the repository or download the files.
+# License
+
+This project is open-source and available under the MIT License.
+

@@ -1,200 +1,192 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900");
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing — Tailwind UI</title>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-body {
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-}
-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e1e1e1;
-}
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  position: relative;
-  max-width: 80px;
-}
-header ul {
-  position: relative;
-  display: flex;
-}
-header ul li {
-  list-style: none;
-}
-header ul li a {
-  display: inline-block;
-  color: #017143;
-  font-weight: bold;
-  margin-left: 40px;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.content .textBox h2 span {
-  color: #017143;
-  font-size: 1.3em;
-  font-weight: 900;
-}
-.content {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.content .textBox {
-  position: relative;
-  max-width: 600px;
-}
-.content .textBox h2 {
-  color: #333;
-  font-size: 4em;
-  line-height: 1.4em;
-  font-weight: 500;
-}
-.content .textBox p {
-  color: #333;
-}
-.content .textBox a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 8px 20px;
-  background: #017143;
-  color: #fff;
-  border-radius: 40px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-.content .imgBox {
-  width: 600px;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
-  margin-top: 50px;
-}
-.content .imgBox img {
-  max-width: 340px;
-}
-.thumb {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  display: flex;
-}
-.thumb li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.thumb li:hover {
-  transform: translateY(-15px);
-}
-.thumb li img {
-  max-width: 60px;
-  animation: float1 2.5s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-.starbucks {
-  animation: float 3s ease-in-out infinite;
-}
-.sci {
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li {
-  list-style: none;
-}
-.sci li a {
-  display: inline-block;
-  margin: 5px 0;
-  transform: scale(0.6);
-  filter: invert(1);
-}
-.sci li img {
-    animation: float1 2.8s ease-in-out infinite;
-}
-.sci li img:hover {
-    transition: 0.5s;
-    transform: translateX(-15px);
-}
-.sci1 {
-    animation-delay: 0.5;
-}
-.sci2 {
-    animation-delay: 1;
-}
-.sci3 {
-    animation-delay: 1.5;
-}
-.circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #017143;
-  clip-path: circle(600px at right 800px);
-}
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes float1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes color-changer {
-    0% {
-        color: initial;
-    }
-    50% {
-        color: #017143;
-    }
-    100% {
-        color: initial;
-    }
-}
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind (CDN build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind runtime config
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { poppins: ['Poppins', 'ui-sans-serif', 'system-ui'] },
+            colors: {
+              brand: {
+                DEFAULT: '#017143',
+                50: '#E9F7F0',
+                100: '#CFF0E1',
+                200: '#9FE1C3',
+                300: '#70D3A6',
+                400: '#40C488',
+                500: '#17B36F',
+                600: '#0F8A55',
+                700: '#0B6941',
+                800: '#085233',
+                900: '#063D26',
+              },
+            },
+            keyframes: {
+              float: {
+                '0%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-30px)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              float1: {
+                '0%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              colorchanger: {
+                '0%': { color: 'inherit' },
+                '50%': { color: '#017143' },
+                '100%': { color: 'inherit' },
+              },
+            },
+            animation: {
+              float: 'float 3s ease-in-out infinite',
+              float1: 'float1 2.5s ease-in-out infinite',
+              colorchanger: 'colorchanger 3s ease-in-out infinite',
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(0,0,0,0.08)',
+            },
+            backdropBlur: { xs: '2px' },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* extra utilities not in core */
+      .clip-circle {
+        /* Tailwind arbitrary values can do this too; kept here for clarity */
+        clip-path: circle(600px at right 800px);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-neutral-100 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 select-none font-poppins">
+    <!-- Decorative brand circle -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="clip-circle absolute inset-0 bg-brand/90 dark:bg-brand/70"></div>
+      <!-- subtle gradient overlay for depth -->
+      <div class="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent dark:via-black/20"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-20 w-full">
+      <div class="mx-auto max-w-7xl px-6 py-4">
+        <div class="flex items-center justify-between rounded-2xl bg-white/70 p-3 shadow-soft ring-1 ring-black/5 backdrop-blur-xs dark:bg-neutral-900/70">
+          <a href="#" class="inline-flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo-placeholder.svg" alt="Logo" class="h-10 w-10" />
+            <span class="text-lg font-semibold tracking-tight">Brand</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex">
+            <a href="#features" class="text-sm font-semibold text-brand hover:opacity-80 transition">Features</a>
+            <a href="#about" class="text-sm font-semibold text-brand hover:opacity-80 transition">About</a>
+            <a href="#contact" class="text-sm font-semibold text-brand hover:opacity-80 transition">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <button id="themeToggle" class="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-semibold shadow-sm hover:bg-neutral-50 active:scale-95 dark:border-white/10 dark:bg-neutral-800 dark:hover:bg-neutral-700" aria-label="Toggle theme">
+              <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79-1.42 1.41 1.79 1.8 1.43-1.42zm10.48 14.32l1.79 1.8 1.42-1.42-1.8-1.79-1.41 1.41zM12 4V1h-2v3h2zm0 19v-3h-2v3h2zm9-9h3v-2h-3v2zM1 12H-2v-2h3v2zm15.24-7.16l1.8-1.79-1.42-1.41-1.79 1.8 1.41 1.4zM4.22 18.36l-1.8 1.79 1.42 1.42 1.79-1.8-1.41-1.41zM12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+              <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13a9 9 0 11-10.63-10.6A7 7 0 1021.64 13z"/></svg>
+            </button>
+            <a href="#get" class="hidden rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow hover:opacity-90 active:scale-95 md:inline-block">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="relative mx-auto flex min-h-[90vh] w-full max-w-7xl flex-col items-center justify-center gap-12 px-6 pt-8 md:flex-row md:justify-between md:gap-6">
+        <!-- Text -->
+        <div class="relative max-w-xl space-y-6">
+          <h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            Good coffee, better days
+            <span class="block text-brand">crafted for you</span>
+          </h1>
+          <p class="text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
+            A crisp, modern hero rebuilt with Tailwind. Responsive by default, accessible, and sprinkled with subtle motion for a premium feel.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#" class="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow hover:opacity-90 active:scale-95">Order now</a>
+            <a href="#features" class="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-700 hover:bg-white active:scale-95 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-900">Explore features</a>
+          </div>
+        </div>
+
+        <!-- Hero image -->
+        <div class="relative mt-8 w-full max-w-xl md:mt-0 md:w-1/2">
+          <div class="relative mx-auto flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=800&auto=format&fit=crop" alt="Coffee cup" class="starbucks mx-auto h-auto max-h-[420px] w-auto rounded-3xl shadow-soft ring-1 ring-black/5 animate-float" />
+          </div>
+        </div>
+
+        <!-- Thumbs (floating) -->
+        <ul class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 transform space-x-6 md:bottom-10">
+          <li class="inline-block cursor-pointer transition-transform hover:-translate-y-3">
+            <img class="h-14 w-14 animate-float1" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=200&auto=format&fit=crop" alt="thumb 1" />
+          </li>
+          <li class="inline-block cursor-pointer transition-transform hover:-translate-y-3">
+            <img class="h-14 w-14 animate-float1 [animation-delay:200ms]" src="https://images.unsplash.com/photo-1472253473691-91d5afaa8a87?q=80&w=200&auto=format&fit=crop" alt="thumb 2" />
+          </li>
+          <li class="inline-block cursor-pointer transition-transform hover:-translate-y-3">
+            <img class="h-14 w-14 animate-float1 [animation-delay:400ms]" src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=200&auto=format&fit=crop" alt="thumb 3" />
+          </li>
+        </ul>
+
+        <!-- Social (right rail) -->
+        <ul class="pointer-events-auto fixed right-4 top-1/2 z-10 -translate-y-1/2 space-y-3 md:right-8">
+          <li>
+            <a aria-label="Twitter" href="#" class="inline-flex transform items-center justify-center rounded-full bg-black/90 p-2 text-white shadow transition hover:-translate-x-2 dark:bg-white/90 dark:text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 animate-float1">
+                <path d="M19.633 7.997c.013.177.013.355.013.532 0 5.42-4.127 11.678-11.678 11.678-2.32 0-4.476-.677-6.29-1.844.325.039.637.052.975.052 1.92 0 3.685-.65 5.093-1.742a4.117 4.117 0 01-3.844-2.853c.26.039.52.065.793.065.377 0 .755-.052 1.107-.143a4.11 4.11 0 01-3.293-4.036v-.052c.546.304 1.181.494 1.855.52a4.103 4.103 0 01-1.83-3.418c0-.754.204-1.45.559-2.054a11.675 11.675 0 008.473 4.3 4.636 4.636 0 01-.104-.94 4.109 4.109 0 017.112-2.811 8.112 8.112 0 002.604-.988 4.12 4.12 0 01-1.805 2.27 8.23 8.23 0 002.371-.637 8.833 8.833 0 01-2.06 2.124z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Instagram" href="#" class="inline-flex transform items-center justify-center rounded-full bg-black/90 p-2 text-white shadow transition hover:-translate-x-2 [animation-delay:200ms] dark:bg-white/90 dark:text-black">
+              <svg class="h-5 w-5 animate-float1" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM17.5 6a1 1 0 100 2 1 1 0 000-2z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Facebook" href="#" class="inline-flex transform items-center justify-center rounded-full bg-black/90 p-2 text-white shadow transition hover:-translate-x-2 [animation-delay:400ms] dark:bg-white/90 dark:text-black">
+              <svg class="h-5 w-5 animate-float1" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.99 3.66 9.13 8.44 9.93v-7.03H7.9v-2.9h2.4V9.41c0-2.37 1.41-3.68 3.56-3.68 1.03 0 2.12.18 2.12.18v2.33h-1.2c-1.19 0-1.56.74-1.56 1.5v1.8h2.65l-.42 2.9h-2.23V22c4.78-.8 8.44-4.94 8.44-9.93z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-24 border-t border-black/5 bg-white/60 py-8 text-center text-sm text-neutral-600 backdrop-blur-xs dark:border-white/10 dark:bg-neutral-900/60 dark:text-neutral-400">
+      <div class="mx-auto max-w-7xl px-6">
+        <p>© <span id="year"></span> Brand. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Persisted theme toggle
+      const html = document.documentElement;
+      const pref = localStorage.getItem('theme');
+      if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+      }
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>
